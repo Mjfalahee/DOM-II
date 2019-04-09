@@ -13,7 +13,7 @@ navlinks.addEventListener('mouseover', event => {
 let systemalert = document;
 
 systemalert.addEventListener('keydown', event => {
-    alert('STOP PRESSING KEYS. SCROLL WHEEL ONLY.');
+    console.log('STOP PRESSING KEYS. SCROLL WHEEL ONLY.');
 });
 
 let busimage = document.querySelector('#partybus');
@@ -58,8 +58,16 @@ fun.addEventListener('dblclick', event => {
     headertext.style.color = 'purple';
 })
 
-let resizeattempt = document.querySelector('body');
+let cutandcopy = document.querySelector('body');
 
-resizeattempt.addEventListener('resize', event => {
-    console.log('resizing');
+cutandcopy.addEventListener('copy', event => {
+    console.log('copy target: ' + event.target.textContent);
+});
+
+document.addEventListener('contextmenu', event => {
+    console.log('rightclick on: ' + event.target);
+})
+
+document.addEventListener('keyup', event => {
+    console.log('They have released the ' + event.key + ' key');
 })
