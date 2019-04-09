@@ -42,3 +42,24 @@ let contentsection = document.querySelector('.content-section');
 contentsection.addEventListener('click', event => {
     event.target.style.border = '3px solid blue';
 })
+
+let destination = document.querySelectorAll('.destination');
+
+for (i=0; i<3; i++){
+destination[i].addEventListener('dblclick', event => {
+    event.target.style.color = 'grey';
+    event.stopPropagation();
+})
+}
+
+let fun = document.querySelector('#fun');
+let headertext = document.querySelector('.logo-heading');
+fun.addEventListener('dblclick', event => {
+    headertext.style.color = 'purple';
+})
+
+let resizeattempt = document.querySelector('body');
+
+resizeattempt.addEventListener('resize', event => {
+    console.log('resizing');
+})
