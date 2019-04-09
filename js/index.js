@@ -10,6 +10,13 @@ navlinks.addEventListener('mouseover', event => {
     }
 });
 
+navlinks.addEventListener('click', event => {
+    if (event.target.className === 'nav-link') {
+        event.preventDefault();
+        console.log('NAV LINK DEFAULT DENIED');
+    }
+})
+
 let systemalert = document;
 
 systemalert.addEventListener('keydown', event => {
